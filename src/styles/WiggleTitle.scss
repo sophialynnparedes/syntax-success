@@ -1,0 +1,13 @@
+.wiggleTitle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wiggleWord {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+}

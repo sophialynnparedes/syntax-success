@@ -1,0 +1,78 @@
+#frontPageTitle {
+    font-family: $font1;
+    color: white;
+    font-size: $titlesize;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    animation-name: fade-in-and-drop;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+#underline {
+    font-family: $font1;
+    color: white;
+    font-size: 90px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: calc(50% - 15px);
+    transform: translateX(-50%);
+    top: 50px;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, 0.01, 0.83, 0.67);
+    z-index: -1;
+}
+
+#infoBlock1 {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+
+    h2 {
+        font-family: $font2;
+        color: $yellow;
+        font-size: 48px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding-left: 60px;
+    }
+
+    li {
+        font-family: $font2;
+        color: white;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#signInBlock {
+    background-color: $lightpurple;
+    border-radius: 14px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+
+    h2 {
+        font-family: $font2;
+        color: $yellow;
+        font-size: 48px;
+        text-align: left;
+        text-shadow: $textshadow;
+        padding-left: 20px;
+    }
+}
+
+#infoBlock2 {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    background-color: $green;
+}

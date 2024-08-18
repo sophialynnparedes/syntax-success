@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-spring": "^9.7.4",
+    "sass": "^1.77.8",
+    "wouter": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
