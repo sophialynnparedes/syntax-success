@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {
     getAuth,
-    signInWithPopup,
+    signInWithRedirect,
     signOut,
     GoogleAuthProvider,
 } from "firebase/auth";
@@ -10,12 +10,18 @@ import { getFirestore, getDoc, doc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-    appId: import.meta.env.VITE_FIREBASE_APP_ID,
-    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+
+    authDomain: "syntax-success.firebaseapp.com",
+
+    projectId: "syntax-success",
+
+    storageBucket: "syntax-success.appspot.com",
+
+    messagingSenderId: "975216978443",
+
+    appId: "1:975216978443:web:fd3b903a173023de7af50e",
+
+    measurementId: "G-4C3Z2Z1PX1",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -27,7 +33,7 @@ googleProvider.setCustomParameters({ prompt: "select_account" });
 
 export const googleLogin = async () => {
     try {
-        const res = await signInWithPopup(auth, googleProvider);
+        const res = await signInWithRedirect(auth, googleProvider);
         const user = res.user;
         await setDoc(
             doc(db, "users", user.uid),
