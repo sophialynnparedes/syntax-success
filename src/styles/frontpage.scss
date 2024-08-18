@@ -1,78 +1,134 @@
-#frontPageTitle {
-    font-family: $font1;
-    color: white;
-    font-size: $titlesize;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    animation-name: fade-in-and-drop;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-#underline {
-    font-family: $font1;
-    color: white;
-    font-size: 90px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: calc(50% - 15px);
-    transform: translateX(-50%);
-    top: 50px;
-    animation-name: fade-in;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(1, 0.01, 0.83, 0.67);
-    z-index: -1;
-}
-
-#infoBlock1 {
-    animation-name: fade-in;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    opacity: 0%;
-
-    h2 {
-        font-family: $font2;
-        color: $yellow;
-        font-size: 48px;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-        text-align: left;
-        padding-left: 20px;
-        margin-bottom: 20px;
-    }
-
-    ul {
-        padding-left: 60px;
-    }
-
-    li {
-        font-family: $font2;
+#frontpage {
+    #frontPageTitle {
+        font-family: $font1;
         color: white;
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: $titlesize;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        animation-name: fade-in-and-drop;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
     }
-}
 
-#signInBlock {
-    background-color: $lightpurple;
-    border-radius: 14px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-
-    h2 {
+    .h2 {
         font-family: $font2;
         color: $yellow;
         font-size: 48px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
         text-align: left;
-        text-shadow: $textshadow;
-        padding-left: 20px;
+        padding-left: 0px;
+        margin-bottom: 20px;
     }
-}
 
-#infoBlock2 {
-    position: absolute;
-    top: 100vh;
-    width: 100%;
-    background-color: $green;
+    #underline {
+        font-family: $font1;
+        color: white;
+        font-size: 90px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        top: 50px;
+        animation-name: fade-in;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(1, 0.01, 0.83, 0.67);
+        z-index: -1;
+    }
+
+    #infoBlock1 {
+        animation-name: fade-in;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0%;
+
+        ul {
+            padding-left: 60px;
+        }
+
+        li {
+            font-family: $font2;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    #signInBlock {
+        background-color: $lightpurple;
+        border-radius: 14px;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #learn-more {
+        display: none;
+        background-color: $green;
+        width: 90%;
+        border-radius: 14px;
+        padding: 10px 0px 10px 0px;
+        box-shadow: $boxshadow;
+    }
+
+    .frontPageButton {
+        background-image: linear-gradient(
+            to bottom right,
+            $darkpurple,
+            $midpurple
+        );
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+        font-size: 40px;
+        font-family: $font1;
+    }
+
+    .frontPageButton:hover {
+        background-image: none;
+        background-color: $lightpurple;
+    }
+
+    .frontPageButton:active {
+        box-shadow: 0px 0px 0px 0px black, 2px 2px 2px 0px black inset;
+        transition: linear 0.1s;
+    }
+
+    #selected.button {
+        background-image: none;
+        background-color: $yellow;
+        color: black;
+        box-shadow: 0px 0px 0px 0px black, 2px 2px 2px 0px black inset;
+    }
+
+    @media (max-width: 820px) {
+        #underline {
+            top: 80px;
+        }
+
+        #infoBlock1andSignIn {
+            flex-direction: column-reverse;
+        }
+
+        #infoBlock1 {
+            width: 90% !important;
+        }
+
+        #signInBlock {
+            width: 90% !important;
+            margin-bottom: 20px;
+        }
+
+        #learn-more-buttons {
+            flex-direction: column !important;
+            align-items: center;
+        }
+
+        .frontPageButton {
+            width: 80% !important;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
 }

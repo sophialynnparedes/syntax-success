@@ -8,6 +8,7 @@ $font1: "VT323", monospace;
 $font2: "kode-mono", monospace;
 $titlesize: 60px;
 $textshadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+$boxshadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.5);
 
 body {
     margin: 0;
@@ -49,6 +50,8 @@ body * {
 
 @import "src/styles/WiggleTitle";
 @import "src/styles/Row";
+@import "src/styles/Col";
+@import "src/styles/Button";
 
 @import "src/styles/animations";
 
